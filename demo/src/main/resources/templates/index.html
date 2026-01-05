@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pinki Kumari | Portfolio</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <div th:replace="fragments/header :: body"></div>
+
+  <main class="card">
+    <img src="/images/profile.jpeg" alt="Profile Photo" class="profile-img" />
+
+    <h1>Hi, I’m Pinki Kumari 👋</h1>
+
+    <p>
+      Software Engineer at Texas Instruments<br/>
+      M.Tech (CSE), IIT Gandhinagar
+    </p>
+
+    <section class="box">
+      <h2>About Me</h2>
+      <p>
+        Hi, I'm Pinki Kumari, pursuing M.Tech in Computer Science and Engineering at IIT Gandhinagar (Aug 2022 – May 2024).
+        I’m working under the supervision of Prof. Anirban Dasgupta on “Automatic Speech Recognition (ASR) using Neural Tangent Kernels (NTKs)”.
+        I also did a 2-month summer internship at ThirdAI Corp., which trains LLMs on CPU instead of GPUs.
+      </p>
+    </section>
+
+    <section class="box">
+      <h2>Links</h2>
+      <p>
+        <a href="mailto:inboxtokumaripinki22@gmail.com">Email</a> |
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/PinkiKumari22" target="_blank">GitHub</a> |
+        <a href="https://leetcode.com" target="_blank">LeetCode</a> |
+        <a href="https://www.kaggle.com" target="_blank">Kaggle</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
