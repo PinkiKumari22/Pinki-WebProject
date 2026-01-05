@@ -9,13 +9,17 @@ COPY demo/mvnw demo/mvnw
 COPY demo/src demo/src
 
 WORKDIR /app/demo
-RUN ./mvnw clean package -DskipTests
+RUN chmod +x ./mvnw && ./mvnw clean package -DskipTests
 
 # ---- Runtime stage ----
 FROM eclipse-temurin:17-jre
 WORKDIR /app
 
+# Copy built jar
 COPY --from=build /app/demo/target/*.jar app.jar
+
+# Copy static files explicitly (IMPORTANT)
+COPY --from=build /app/demo/src/main/resources/static /app/static
 
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","app.jar"]
